@@ -16,7 +16,7 @@ const Form = () => {
 
 	return (
 		<form onSubmit={handleSubmit(onSubmit)}>
-			<input {...register('firstName')} />
+			<input {...register('firstName', { required: true, minLength: 3 })} />
 			<select {...register('gender')}>
 				<option value="female">female</option>
 				<option value="male">male</option>
